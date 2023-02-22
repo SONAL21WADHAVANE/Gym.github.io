@@ -1,0 +1,599 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="Stylesheet" type="type/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/ font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            *, ::after, ::before {
+                box-sizing: border-box;
+            }
+
+            header{
+                height: 100vh;
+                width: 100%;
+                background: black;
+                clip-path: polygon(0% 0%,100% 0%,100% 100%,80% 80%,0% 100%);
+            }
+            nav{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                color: #ffffff;
+
+   
+            }
+            .logo {
+                color: #e4dbdb;
+                font-size: 50px;
+                font-weight: bold;
+                letter-spacing: 5px;
+                display: inline;
+            }
+            
+            .menu{
+                
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                justify-content: space-evenly;
+                
+            }
+            .menu a{
+                padding: 10px;
+                margin: 10px;
+                text-decoration: none;
+                color: white;
+            }
+            .menu a:first-child{
+                border-bottom: 2px  solid #74b9ff;
+            }
+            .icons img{
+                width: 50px;
+                height: 50px;
+               
+            }
+            #logo{
+                color: #74b9ff;
+            }
+            .menu a:hover{
+                color:grey;
+            }
+        
+            .logo img{
+                width: 50px;
+                height: 50px;
+
+            }
+            .container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            .right{
+                flex-basis: 50%;
+                max-width: 400px;
+                color: white;
+            }
+            .left{
+                flex-basis: 50%;
+            }
+            .right h1{
+                color: #3888d8;
+                font-size: 50px;
+            }
+            .right p{
+                font-size: 25px;
+                margin: 10px 0px;
+            }
+            .right .btn{
+                background: grey;
+                padding: 10px 20px;
+                color:#090909;
+                border-radius: 8px;
+                border: 1px solid #20d1d1;
+            }
+            .btn:hover{
+                color: rgb(216, 148, 22);
+            }
+            .About{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            .Aright{
+                flex-basis: 50%;
+                max-width: 400px;
+                color: black;
+            }
+            .Aleft{
+                flex-basis: 50%;
+            }
+            .box{
+               
+               
+                text-align: center;
+            }
+            #name{
+                font-size: 2rem;
+                color: #3888d8;
+            
+                
+            }
+            #box{
+                font-size: small;
+                color: #74b9ff;
+                font: italic;
+            }
+            .About-left-col #me{
+                color: rgb(219, 18, 18);
+            }
+            .About-left-col {
+                color: black;
+            }
+            .About-left-col{
+               margin: 10px;
+            }
+            .About-left-col h2{
+             
+                text-align: justify;
+                margin: 15px 0px;
+                font-style: inherit;
+                font-size: medium;
+            }
+            .About-left-col .btn{
+                padding: 10px;
+                margin: 10px 0px;
+                color: black;
+                background: #74b9ff;
+            }  
+            #signup{
+                padding-top: 80px;
+                padding-bottom: 50px;
+                
+                background: black;
+                
+            }    
+            .signup-row{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                background:black;
+            }
+            .signup-left-col{
+                flex-basis:50% ;
+            }
+            .signup-left-col img{
+                width:60% ;
+            }
+
+            .signup-right-col{
+                flex-basis:50% ;
+            }
+            .signup-right-col h1{
+                font-size: 90px;
+                color: white;
+            }
+            .signup-right-col h2{
+                font-size: 45px;
+                letter-spacing: 60px;
+                color: pink;
+                margin: 10px 0px;
+            }
+            .signup-right-col .btn{
+                border-color: white;
+                background: white;
+                color: #090909;
+                width: 70px;
+                align-items: center;
+                border-radius: 3rem;
+                
+            }
+            
+            #services{ 
+                padding: 50px 0px; 
+            } 
+
+            .services-info{ 
+                text-align: center;
+            }
+
+            .services-info h1{
+
+                font-size: 50px;
+            }
+
+            .services-info {
+
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .Services-row{
+                display: grid;
+                grid-template-columns: repeat(3,300px);
+                grid-auto-rows:minmax(150px,auto) ;
+                grid-gap:2rem ;
+                justify-content: center;
+                padding-top: 20px;
+            }
+            .services-box{
+                box-shadow: 2px 3px 5px grey;
+                padding: 10px;
+                text-align: center;
+            }
+            .services-box i{
+                background: #090909;
+                color: white;
+                font-size: 30px;
+                padding: 10px;
+                margin-top: -20px; ;
+            }
+            #members .ser-info{
+                text-align: center;
+            }
+            #members .ser-info h1{
+                font-size: 50px;
+            }
+            #members{
+                padding: 100px;
+                background: url(img/10.png);
+                background-repeat: no-repeat;
+                background-position: top right;
+            }
+            .member-card .img{
+                width:100px ;
+                height: 100px;
+
+            }
+            .member-card{
+                text-align: center;
+                margin: auto;
+            }
+            .member-card p,h2{
+                margin: 20px 0px;
+            }
+            #Works .works-info{
+                text-align: center;
+            }
+            #Works .works-info h1{
+                font-size: 50px;
+            }
+            .works-row{
+                display: grid;
+                grid-template-columns: repeat(3,300px);
+                grid-auto-rows:minmax(150px,auto) ;
+                grid-gap:2rem ;
+                justify-content: center;
+                padding-top: 20px;
+            }
+            .works-box{
+                box-shadow: 2px 3px 5px grey;
+                padding: 10px;
+                text-align: center;
+            }
+            .works-box img{
+                width: 200px;
+                height: 100px;
+            }
+            .works-box p{
+              text-align: center;
+            }
+            .wrks-box img:hover{
+                border-radius: 2rem;
+                border-color: #20d1d1;
+            } 
+            #Works{
+                padding-top: 50px;
+                padding-bottom: 200px;
+                background: rgb(235, 230, 230);
+                clip-path: polygon(0% 0%,100% 0%,100% 100%,80% 80%,0% 100%);
+            }
+            
+            .con-info{
+                text-align: center;
+            }
+            .con-info h1{
+                font-size: 50px;
+
+            }
+            .con-info p{
+                font-size: 25px;
+                
+            }
+            .contact-row{
+                margin: 100px;
+                padding: 100px;
+                display: flex;
+            }
+            .contact-left-row{
+                flex-basis:50px ;
+            }
+            .contact-right-row{
+                flex-basis:50px ;
+                align-items: center;
+            }
+            .form{
+                align-items: center;
+            }           
+            footer{
+                align-items: center;
+                text-align: center;
+                background: black;
+                color: white;
+                padding: 10px;
+                display: flex;
+                justify-content:space-around;
+               
+            }
+            .form  input{
+                width: 70%;
+                border-color: #090909;
+                padding: 10px;
+                margin: 10px;
+
+            }
+            .form textarea{
+                width: 70%;
+                border-color: #090909;
+                padding: 10px;
+                margin: 10px;
+            }
+            .form .btn{
+                width: 70%;
+                border-color: #090909;
+                padding: 10px;
+                margin: 10px;
+                
+
+                
+            }
+
+                
+
+            
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/9.png">
+                    BN<span id="logo">GS</span>
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Servicess</a>
+                    <a href="#">Client</a>
+                    <a href="#">Our work</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="icons">
+                    <img src="img/icons/icon1.png">
+                    <img src="img/icons/icon2.png">
+                    <img src="img/icons/icon3.png">
+                    <img src="img/icons/icon4.png">
+                </div>
+            </nav>
+            
+            <div class="container">
+                <div class="left">
+                    <img src="img/black.jpg">
+                </div>
+                <div class="right">
+                    <p>I am a</p>
+                    <h1>GYM Trainer</h1>
+                    <p>From Pune,doing gym is good for healthy life.It healps our body to fit .It release stress from our mind .</p>
+                    <button class="btn">Join us</button>
+                </div>
+            </div>
+        </header>
+        <div class="box">
+            <p id="name">WELCOME TO THE GYM!</p>
+            <h1 id="box " style="font-size: 20px;">Take care of your body. It's the only place you have to live.</h1>
+        </div>
+       <selector>
+        <br>
+        <br>
+        <br>
+        
+        <div class="About">
+            <div class="About-left-col">
+                <h1> About <span id="me">Me</span></h1>
+                <br>
+                <p>I am a</p>
+                <h1>GYM  as well as fittness Trainer </h1>
+                <h2>BNGS is an emerging company which seeks to create a revolutionary digital platform in connecting sole traders such as personal trainers, physiotherapists and sports therapists, Dietitians.  Exercise instructors etc as well as Gyms to potential clients.Our main goal is to connectfitness professionals such as personal trainers, physics to potential clients and trainees.</h2>
+                <br>
+                <button class="btn">Read more..</button>
+            </div>
+            <div class="About-right-col">
+                <img src="img/4.jpeg">
+            </div>
+        </div>
+       </selector>
+       <section id="singup">
+        <div class="signup-row">
+            <div class="signup-left-col">
+                <img src="img/bl.jpg">
+            </div>
+            <div class="signup-right-col">
+                <h1>BEING<span id="logo">BODY</span></h1>
+                <h2>BUILDER</h2>
+                <button class="btn">Signup</button>
+            </div>
+        </div>
+       </section>
+    
+        <section id="services">
+            <div class="services-info">
+        
+                <h1>Our <span id="logo">Services</span></h1>
+        
+                <p>What we Provide</p>
+        
+             </div>
+            
+            <div class="Services-row">
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+                <div class="services-box"> 
+                    <i class="fa fa-suitcase" aria-hidden="true"></i>
+                
+                    <h1>Cardio</h1>
+                    <p> From Rajasthan, doing gym is good for healthy life. </p>
+                
+                </div>
+
+            </div>
+        </section>
+        <section id="members">
+            <div class="ser-info">
+                <h1>Our<span id="logo">Members</span></h1>
+                <p>What our gym member say..</p>
+            </div>
+
+            <div class="member-card">
+                <img class="img" src="img/mem.jpeg">
+                <p>
+                    One of the best gyms to start your workout journey with. A very well managed Gym. Good staff. Good knowledge trainers. One of the special thing about the gym is positive energy, none of the gym have this kind of energy as compared to any other Gyms in this area. You will always feel energetic whenever you step in the Gym. Place doesn't matter at all it's just the name its self-enough. I have joined in 2012 and was there for 4 year. NO COMPARISON WITH GOLD'S
+                </p>
+                <h2>*
+                    Maria Sharapova, Gym client
+                </h2>
+                <div class="icons">
+                    <img src="img/icons/icon1.png">
+                    <img src="img/icons/icon2.png">
+                    <img src="img/icons/icon3.png">
+                    <img src="img/icons/icon4.png">
+                </div>
+            </div>
+
+        </section>
+        <section id="Works">
+            <div class="works-info">
+                <h1>Our<span id="logo">Works</span></h1>
+                <p>What we provide</p>
+            </div>
+            <div class="works-row">
+                <div class="works-box">
+
+                    <img  src="img/the-gym-aerobic.jpg">
+                    <p>aerobic</p>
+                </div>
+                <div class="works-box">
+                    <img src="img/the-gym-free-weight.jpg">
+                    <p>aerobic</p>
+                </div>
+                <div class="works-box">
+                    <img src="img/the-gym-kikboxing.jpg">
+                    <p>aerobic</p>
+                </div>
+                <div class="works-box">
+                    <img src="img/the-gym-power-yoga.jpg">
+                    <p>aerobic</p>
+                </div>
+                <div class="works-box">
+                    <img src="img/the-gym-strength.jpg">
+                    <p>aerobic</p>
+                </div>
+                <div class="works-box">
+                    <img src="img/the-gym-zumba.jpg">
+                    <p>aerobic</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Contact">
+            <div class="con-info">
+                <h1>Get in<span id="logo">Touch</span></h1>
+                <p>We are Available</p>
+            </div>
+            <div class="contact-row">
+                <div class="contact-left-col">
+                    <div class="form">
+                        <input type="text" name="" placeholder="E-mail">
+                        <input type="text" name="" placeholder="Subject">
+                        <textarea rows="10" cols="40" placeholder="Message"></textarea>
+                        <br><button class="btn">Send</button>
+                    </div>
+                </div>
+                <div class="contact-right-col">
+                    <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1>
+                    <p> nde3081998@gmail.com</p><br>
+                    <h1><i class="fa fa-phone" aria-hidden="true"></i> 
+                            Mobile
+                    </h1>
+                    <p>823944147,823944140</p>
+                    <br>
+                        
+                    <h1><i class="fa fa-location-arrow" aria-hidden="true"></i>Address</h1> 
+                        <p> Near Shyam Mandir<br>Ward no.5, Laxmangarh (Sikar), Rajasthan</p>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+                <h1>BN<span id="logo">GS</span></h1>
+
+                <p>@ copy right2022 BNGS,pune,India</p>
+                <div class="icons">
+                    <img src="img/icons/icon1.png">
+                    <img src="img/icons/icon2.png">
+                    <img src="img/icons/icon3.png">
+                    <img src="img/icons/icon4.png">
+                </div>
+        </footer>
+
+      
+
+    
+        
+    </body>
+</html>
